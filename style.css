@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,500&display=swap');
+
+:root {
+    --base-color: #FBFFE2;
+    --sec-color: #D3E4CD;
+    --font-color: #FFAFAF;
+}
+@font-face {
+    font-family: 'MyWebFont';
+    src:  url(ballet_harmony-webfont.woff2) format('woff2'),
+          url(ballet_harmony-webfont.woff) format('woff');
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+*::selection {
+    color: var(--base-color);
+    background-color: var(--font-color);
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    outline: none; border: none;
+    text-decoration: none;
+    background-color: var(--base-color);
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+section {
+    min-height: 100vh;
+    padding: 0 9% 0 9%;
+    padding-top: 9rem;
+
+}
+
+header {
+    position: fixed;
+    top: 0; left: 0;
+    background-color: var(--font-color);
+    width: 100%;
+    height: 5em;
+    display: flex;
+    align-items: center;
+}
+.nav ul {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.nav ul li {
+    display: inline-block;
+    font-size: 2.0rem;
+    font-weight: 600;
+    margin: 0 3rem;
+}
+
+.nav ul li a {
+    color: var(--base-color);
+    transition: .3s;
+}
+
+.nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.main {
+    text-align: center;
+    color: var(--font-color);
+}
+
+#title {
+    font-family: 'MyWebFont', sans-serif;
+    font-size: 7rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+#image {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+#image img {
+    max-width: 50%;
+    height: auto;
+    display: block;
+    margin: auto;
+    border: 8px solid var(--font-color);
+}
+
+#story {
+    text-align: center;
+    margin: auto;
+}
+
+#story h2 {
+    font-family: 'MyWebFont';
+    font-size: 6rem;
+    margin-bottom: 2rem;
+    color: var(--font-color);
+}
+
+.tribute-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: var(--font-color);
+}
+
+#story .tribute-info img {
+    max-width: 300px;
+    max-height: 300px;
+    border: 6px solid var(--font-color);
+    border-radius: 3px;
+}
+
+#story .tribute-info p {
+    text-align: justify;
+    font-size: 2rem;
+    padding: 2rem;
+}
+#projects h2 {
+    font-family: 'MyWebFont';
+    font-size: 6rem;
+    margin-bottom: 2rem;
+    color: var(--font-color);
+}
+
+#projects {
+    text-align: center;
+    margin: auto;
+}
+
+#projects .project-photo {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.project-photo-satu {
+    position: relative;
+    margin: 1rem 1rem;
+    cursor: pointer;
+}
+
+.project-photo img {
+    max-width: 100%;
+    display: block;
+}
+
+.album-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--font-color);
+    opacity: 0;
+    transition: .3s;
+}
+
+.album-overlay:hover {
+    opacity: 1;
+}
+
+.release-date, .album-title {
+    color: white;
+    font-size: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: var(--font-color);
+    text-align: center;
+    padding: 1rem 0;
+}
+
+footer h2 {
+    font-size: 2.5rem;
+    margin-right: 1em;
+}
+
+footer ul li {
+    display: inline-block;
+}
+
+@media (max-width: 700px) {
+    section {
+        min-height: auto;
+    }
+    
+    #image img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+    #title {
+        font-size: 6.35rem;
+    }
+
+    header {
+        display: none;
+    }
+
+    .tribute-info {
+        flex-direction: column;
+    }
+
+    .dua {
+        margin-top: 2rem;
+        flex-direction: column-reverse;
+    }
+
+    #story .tribute-info p {
+        text-align: left;
+        padding: 1rem;
+    }
+
+    #projects .project-photo {
+        display: flex;
+        flex-direction: column;
+    }
+}
